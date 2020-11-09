@@ -7,6 +7,8 @@ import {
   View,
   StyleSheet,
   Text,
+  Image,
+  ScrollView
 } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
@@ -76,12 +78,61 @@ const MainScreen = (props) => {
   }
 
   return (
+    <ScrollView>
       <View style={styles.centered}>
-      <Text>Nombre: {name}</Text>
-      <Text>Direccion: {address}</Text>
-      <Text>Email: {email}</Text>
-      <Text>Celular: {phone_number}</Text>
+      <View>
+   <Image source={require('../../assets/logo.jpg')} style={styles.image} resizeMode='contain' /> 
+   </View>
+      <View>
+      <Text style={styles.titulos}>VectorPAI Móvil</Text>
       </View>
+      
+<View>
+<Text style={styles.palabrass}>Nombre de Parcipante: {name}</Text>
+</View>
+
+<View>
+<Text style={styles.palabrass}>Direccion: {address}</Text>
+</View>
+
+<View>
+<Text style={styles.palabrass}>Email: {email}</Text>
+</View>
+
+<View>
+<Text style={styles.palabrass}>Celular: {phone_number}</Text>
+</View>
+
+
+<View> 
+<Text style={styles.palabrass}>Saldo de Aportación Ordinaria: </Text>
+</View>
+
+<View> 
+<Text style={styles.palabrass}>Saldo de Aportación Extraordinaria:</Text>
+</View>
+
+<View> 
+<Text style={styles.palabrass}>Saldo de Rendimiento:</Text>
+</View>
+
+<View> 
+<Text style={styles.palabrass}>Saldo Distribuido (Otros empleados)</Text>
+</View>
+
+<View> 
+<Text style={styles.palabrass}>Retiros: $</Text>
+</View>
+
+<View> 
+<Text style={styles.palabrass}>Saldo Total: $</Text>
+</View>
+
+<View> 
+<Text style={styles.palabrass}>Saldo Posible a Retirar: $</Text>
+</View>
+      </View>
+      </ScrollView>
   );
 };
 
@@ -119,6 +170,25 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  palabrass:{
+    margin: 10,
+       fontSize:15,
+       padding:10,
+     },
+     titulos:{
+      fontSize:30,
+      paddingTop:5,
+    },
+    image: {
+      width: '100%',
+      height: 230,
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color:'black',
+      padding:90
+    },
 });
 
 export default MainScreen;

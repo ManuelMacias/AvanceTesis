@@ -34,7 +34,7 @@ const defaultNavOptions = {
   },
   headerTintColor: Platform.OS === "android" ? "white" : Colors.primary,
 };
-
+//Aqui va el market
 const ProductsNavigator = createStackNavigator(
   {
     productsOverview: ProductsOverviewScreen,
@@ -72,7 +72,7 @@ const OrdersNavigator = createStackNavigator(
     defaultNavigationOptions: defaultNavOptions,
   }
 );
-
+//Aqui van las cosas de prestamo
 const PrestamosNavigator = createStackNavigator(
   {
     Prestamos: OrdersScreen,
@@ -90,7 +90,7 @@ const PrestamosNavigator = createStackNavigator(
     defaultNavigationOptions: defaultNavOptions,
   }
 );
-
+//Aqui van los datos de usuario
 const MainScreenNavigator = createStackNavigator(
   {
     mainScreen: MainScreen,
