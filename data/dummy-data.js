@@ -48,7 +48,33 @@ const PRODUCTS = [
     'https://cdn.pixabay.com/photo/2015/10/03/02/14/pen-969298_1280.jpg',
     "Can be used for role-playing (not the kind of role-playing you're thinking about...).",
     5.49
-  )
+  ),
+  new Product(
+    'p7',
+    'u1',
+    'Ordenadores e impresoras',
+    'https://static3.abc.es/media/tecnologia/2019/07/11/powerbookG4-kskD--620x349@abc.jpg',
+    'Awesome hardware and memory. Buy now before a new one is released!',
+  10,000
+    ),
+  new Product(
+    'p8',
+    'u1',
+    'Acciones de Soriana',
+    'https://www.organizacionsoriana.com/images/soriana_express.png',
+    'Tienda de venta de productos con sucursales en todo México',
+    294,600
+  ),
+  new Product(
+    'p9',
+    'u1',
+    '1000 metros cubicos en terreno',
+    'https://images.adsttc.com/media/images/5f10/80ed/b357/65e1/f700/0086/medium_jpg/07112019-Jaime_Navarro_6319.jpg?1594917086',
+'Terreno con edificio listo para ser ocupado.',
+    4,300,000
+
+  ),
+
 ];
 
 export default PRODUCTS;
