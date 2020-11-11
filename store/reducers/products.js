@@ -9,7 +9,10 @@ import {
 
 const initialState = {
   availableProducts: [],
-  userProducts: []
+  userProducts1: PRODUTCTS.filter(prod=>prod.ownerId==='u1'),
+userProducts2: PRODUTCTS.filter(prod=>prod.ownerId==='u2'),
+userProducts3: PRODUTCTS.filter(prod=>prod.ownerId==='u3'),
+  
 };
 
 export default (state = initialState, action) => {

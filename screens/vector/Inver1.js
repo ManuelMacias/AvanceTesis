@@ -10,8 +10,31 @@ import HeaderButton from "../../components/UI/HeaderButton";
 import OrderItem from "../../components/shop/OrderItem";
 import * as ordersActions from "../../store/actions/orders";
 import Colors from "../../constants/Colors";
+import PRODUTCTS from '../../data/dummy-data';
 
-const Inver1=(props)=> {    
+import Product from "../../models/product";
+import {
+  CREATE_PRODUCT,
+  DELETE_PRODUCT,
+  SET_PRODUCTS,
+  UPDATE_PRODUCT,
+} from "../actions/products";
+
+
+
+const Inver1=(props)=> {   
+  const initialState={
+userProducts1: PRODUTCTS.filter(prod=>prod.ownerId==='u1'),
+userProducts2: PRODUTCTS.filter(prod=>prod.ownerId==='u2'),
+userProducts3: PRODUTCTS.filter(prod=>prod.ownerId==='u3'),
+  };
+  
+ const products=useSelector(state=>state.products.userProducts);
+return (
+<FlatList data={products} keyExtractor={item=>item.id} renderItem={itemData=><Text>{itemData.item.title}</Text>}/>
+);
+};
+
 
   Inver1.navigationOptions = (navData) => {
     return {
@@ -30,89 +53,4 @@ const Inver1=(props)=> {
     };
   };
 
-    return (
-      ////Imagen y Titulo y datos 
-      <ScrollView>
-<View>
-  <View>
-  <Image source={require('../assets/logo.jpg')} style={styles.image} resizeMode='contain' /> 
-  </View>
- <View style={styles.container}>
-<Text style={styles.titulos}>VectorPAI Móvil</Text>
-</View>
-<View style={styles.dato}>
-<Text style={styles.palabrass}>Ofertas de Inversión</Text>
-</View>   
-
-    <SafeAreaView style={styles.conta}>
-      <View style={styles.conta}>
-        <Card>
-          {/*react-native-elements Card*/}
-          <Text style={styles.paragraph}>
-          Ejecutivo de aguna cosa de nivel bajo
-          </Text>
-        </Card>
-      </View>
-    </SafeAreaView>
-
- <View style={styles.conta}>
-<Card>
-  <Text style={styles.paragraph}>VectorPAI Móvil</Text>
-</Card>
- </View>     
-
-
-</View>
-</ScrollView>
-  )
-}
-const styles = StyleSheet.create({
-       boton:{
-    width:380,
-    alignItems:'flex-end',
-    alignSelf:'flex-end',
-    paddingTop:15,
-  },
-  container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color:'black',
-      padding:20,
-    },
-    image: {
-      width: '100%',
-      height: 230,
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color:'black',
-      padding:90
-    },
-      palabrass:{
- margin: 24,
-    fontSize:20,
-    padding:5,
-  },
-    titulos:{
-      fontSize:30,
-      paddingTop:5,
-    },
-    paragraph: {
-    margin: 20,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: '#34495e',
-  },
-    conta: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 40,
-    backgroundColor: '#ddf0f1',
-  },
-  });
 export default Inver1;

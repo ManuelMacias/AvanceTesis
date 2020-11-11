@@ -21,6 +21,11 @@ import ConfirmUserScreen from "../screens/user/ConfirmationScreen";
 import SignUpScreen from "../screens/user/SignUpScreen";
 import MainScreen from "../screens/vector/MainScreen";
 import Cuestionario from "../screens/vector/Cuestionario";
+import ProductsPerfil1 from "../screens/shop/ProductsPerfil1";
+import ProductsPerfil2 from "../screens/shop/ProductsPerfil2";
+import ProductsPerfil3 from "../screens/shop/ProductsPerfil3";
+
+
 
 const defaultNavOptions = {
   headerStyle: {
@@ -40,6 +45,7 @@ const ProductsNavigator = createStackNavigator(
     productsOverview: ProductsOverviewScreen,
     ProductDetail: ProductDetailScreen,
     Cart: CartScreen,
+
   },
   {
     navigationOptions: {

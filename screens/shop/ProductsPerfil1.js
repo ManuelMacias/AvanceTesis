@@ -17,11 +17,11 @@ import * as cartActions from "../../store/actions/cart";
 import * as productsActions from "../../store/actions/products";
 import Colors from "../../constants/Colors";
 
-const ProductsOverviewScreen = (props) => {
+const ProductsPerfil1 = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [error, setError] = useState();
-  const products = useSelector((state) => state.products.availableProducts);
+  const products = useSelector((state) => state.products.userProducts1);
   const dispatch = useDispatch();
 
   const loadProducts = useCallback(async () => {
@@ -159,4 +159,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProductsOverviewScreen;
+export default ProductsPerfil1;
